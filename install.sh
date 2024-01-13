@@ -112,7 +112,7 @@ msg() {
         local color=$yellow
         ;;
     err)
-        local color=$red
+        local color=$orange
         ;;
     ok)
         local color=$green
@@ -417,7 +417,7 @@ main() {
 
     # create systemd service
     load systemd.sh
-    is_new_install=1
+    is_new_install=10
     install_service $is_core &>/dev/null
 
     # create condf dir
@@ -425,7 +425,7 @@ main() {
 
     load core.sh
     # create a tcp config
-    add tcp
+	add reality
     # remove tmp dir and exit.
     exit_and_del_tmpdir ok
 }
